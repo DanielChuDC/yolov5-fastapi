@@ -7,6 +7,8 @@ ENV MAX_WORKERS=24
 ENV LOG_LEVEL="warning"
 ENV TIMEOUT="200"
 
+RUN apt-get update
+RUN apt-get install libgl1 -y
 RUN mkdir /yolov5-fastapi
 
 COPY requirements.txt /yolov5-fastapi
